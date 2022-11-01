@@ -12,6 +12,10 @@ public class Car {
         this.engine = engine;
     }
 
+    public Car(Tire tires[]) {
+        this.tires = tires;
+    }
+
     void run(){
         fuel = fuel-1;
         if(fuel>0) {
