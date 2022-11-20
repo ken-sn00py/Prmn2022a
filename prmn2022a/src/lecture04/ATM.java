@@ -20,18 +20,16 @@ public class ATM {
     }
 
     public void deposit(String number,long money){
-        long a = account.getBalance() + money;
-        account.setBalance(a);
+        account.setBalance(account.getBalance() + money);
         System.out.println("口座番号："+number+"　に"+money+"円入金しました。");
     }
 
     public long withdraw(String number,long money){
         if(account.getBalance()>money) {
-            long b = account.getBalance() - money;
-            System.out.println("口座番号："+number+"　から"+money+"円引き出しました。残高："+b+"円です。");
-            account.setBalance(b);
+            account.setBalance(account.getBalance() - money);
+            System.out.println("口座番号："+number+"　から"+money+"円引き出しました。残高："+account.getBalance()+"円です");
         }else {
-            System.out.println("口座番号："+number+" から"+money+"円引き出せませんでした。残高："+account.getBalance()+"円です。");
+            System.out.println("口座番号："+number+"　から"+money+"円引き出せませんでした。残高："+account.getBalance()+"円です");
         }
         return account.getBalance();
     }

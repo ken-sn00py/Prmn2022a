@@ -7,8 +7,9 @@ public class Exercise4_2 {
         Account account = new Account("藤井智子","12345");
 
         if(atm.existsAccount(account.getName(),account.getNumber())){
-            System.out.println("名前"+account.getName()+" 口座番号："+ account.getNumber()+"はありました。");
+            System.out.println("名前："+account.getName()+" 口座番号："+ account.getNumber()+"はありました。");
         }else {
+            System.out.println("名前："+account.getName()+" 口座番号："+ account.getNumber()+"は存在しません。");
             atm.registerAccount(account.getName(), account.getNumber());
         }
         atm.deposit(account.getNumber(),1000);
