@@ -12,6 +12,7 @@ public class ATM {
     }
 
     public void registerAccount(String name,String number){
+        accountList.add(new Account(name, number));
         System.out.println(name+"さんのアカウントを口座番号："+number+"で登録しました");
     }
 
