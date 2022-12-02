@@ -1,6 +1,5 @@
 package lecture06;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -13,12 +12,11 @@ public class Exercise6_2 {
         ArrayList<Integer> list = new ArrayList<>();
 
         for(int i = 0; i < 5; i++){
-            list.add(random.nextInt(8)-1);
+            list.add(random.nextInt(6)+1);
         }
 
         Scanner input = new Scanner(System.in);
         System.out.println("さいころを5つ振りました。\r\n何番目のさいころの値を確認しますか？");
-
 
         try{
             int a = input.nextInt();
